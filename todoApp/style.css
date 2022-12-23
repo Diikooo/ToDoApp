@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+:root{
+    --accent: #ea5959;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background:var(--accent);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.todo{
+    padding: 30px;
+    background-color: beige;
+    width: 70%;
+    border-radius: 25px;
+}
+
+.todo__new {
+    display: flex;
+    margin: 15px 0 ;
+}
+.todo__new input{
+    margin-right: 16px;
+    font-size: 18px;
+    padding: 6px 16px;
+    border-radius:8px;
+    height: 40px;
+    border:  1px solid rgba(0, 0, 0, 0.3);
+    flex-grow:0.4;
+}   
+.todo__add {
+    text-align: center; 
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 32px;
+    border-radius: 8px;
+    background: rgb(227, 74, 74);
+    border:  1px solid rgba(0, 0, 0, 0.3);
+    color: bisque;
+    cursor: pointer;
+}
+.todo__add:hover{
+    background: rgb(227, 125, 107);
+}
+.todo__list{
+    margin-top: 15px;
+}
+
+.todo__list>*:not(:last-child) {
+    margin-bottom: 8px;
+}
+.todo__task {
+    display: flex;
+   align-items: center;
+   min-height: 20px;
+
+}
+
+.todo__task:hover .todo__task-close{
+    display: block;
+}
+
+.todo__task_complete .todo__task-text{
+text-decoration: line-through;
+color:rgb(136, 138, 140);
+}
+
+.todo-checkbox {
+    margin-right: 16px;
+}
+.todo-checkbox input{
+    display: none;
+}
+.todo-checkbox input:checked+ div {
+    background: rgb(207, 110, 110);
+}
+.todo-checkbox input:checked+ div::after{
+    display: block;
+}
+.todo-checkbox div{
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    border:1px solid rgba(0, 0, 0, 0.3);
+    border-radius:5px;
+    position: relative;
+    color:#fff;
+}
+.todo-checkbox div::after{
+    content:'✓';
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: -2px;;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.todo__task-text {
+    font-size: 20px;
+}
+.todo__task-close {
+    display: none;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: center; 
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 28px;
+    border-radius: 8px;
+    background: rgb(227, 74, 74);
+    border:  1px solid rgba(0, 0, 0, 0.3);
+    color: bisque;
+    cursor: pointer;
+}
+
+.todo__task-close:hover{
+    background: rgb(227, 125, 107);
+}
